@@ -10,6 +10,9 @@ gem 'sqlite3'
 # gem 'devise' for handling logins
 gem 'devise'
 
+# gem 'simple_form' for better form styling (works with bootstrap)
+gem 'simple_form'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
