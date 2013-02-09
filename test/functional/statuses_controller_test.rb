@@ -54,20 +54,19 @@ class StatusesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should be logged in to show a status" do 
-    get :show, id: @status
+  test "should be logged in to update a status" do 
+    get :update, id: @status
     assert_response :redirect
     assert_redirected_to new_user_session_path
   end
 
   test "should show status" do
-    sign_in users(:jason)
-
     get :show, id: @status
     assert_response :success
   end
 
   test "should update status" do
+    sign_in users(:jason)
     put :update, id: @status, status: { content: @status.content}
     assert_redirected_to status_path(assigns(:status))
   end
