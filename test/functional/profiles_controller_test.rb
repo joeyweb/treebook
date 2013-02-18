@@ -24,4 +24,5 @@ class ProfilesControllerTest < ActionController::TestCase
       assert_equal users(:jason), status.user
     end
   end
+  
 end
